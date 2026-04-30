@@ -1,11 +1,12 @@
 import React, { useState } from "react";
-import Aside from "../common/aside";
+
 import Header from "../common/Header";
 import Footer from "../common/Footer";
 import api from "../utills/AxiosConfig";
 import { useNavigate, useParams } from "react-router-dom";
 import { toast } from "react-toastify";
 import { useQuery } from "@tanstack/react-query";
+import Aside from "../common/Aside";
 
 function AddEvent() {
   const navigate = useNavigate();

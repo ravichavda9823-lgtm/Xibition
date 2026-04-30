@@ -6,7 +6,7 @@ import Footer from "../common/Footer";
 import api from "../utills/AxiosConfig";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { toast } from "react-toastify";
-import Aside from "../common/aside";
+import Aside from "../common/Aside";
 
 function ManageComplaint() {
   const queryClient = useQueryClient();

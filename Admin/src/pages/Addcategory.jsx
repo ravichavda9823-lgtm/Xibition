@@ -1,10 +1,11 @@
 import React, { useState } from "react";
-import Aside from "../common/aside";
+
 import Header from "../common/Header";
 import Footer from "../common/Footer";
 import api from "../utills/AxiosConfig";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
+import Aside from "../common/Aside";
 
 function AddCategory() {
   const [loading, setLoading] = useState(false);

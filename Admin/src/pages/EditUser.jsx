@@ -5,7 +5,9 @@ import Header from "../common/Header";
 import Footer from "../common/Footer";
 import api from "../utills/AxiosConfig";
 import { toast } from "react-toastify";
-import Aside from "../common/aside";
+import Aside from "../common/Aside";
+
+
 
 function EditUser() {
   const location = useLocation();

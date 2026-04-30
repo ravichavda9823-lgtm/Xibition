@@ -7,7 +7,8 @@ import api from "../utills/AxiosConfig";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
-import Aside from "../common/aside";
+import Aside from "../common/Aside";
+
 
 function ManageEvent() {
    const queryClient = useQueryClient();

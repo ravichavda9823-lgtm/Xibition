@@ -6,7 +6,7 @@ import api from "../utills/AxiosConfig";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
 import { toast } from "react-toastify";
 import { useQuery } from "@tanstack/react-query";
-import Aside from "../common/aside";
+import Aside from "../common/Aside";
 
 function EditEvent() {
   const [preview, setPreview] = useState(null);

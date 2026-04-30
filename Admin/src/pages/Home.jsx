@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import Header from "../common/Header";
 import Footer from "../common/Footer";
-import Aside from "../common/aside";
+
 import api from "../utills/AxiosConfig";
+import Aside from "../common/Aside";
 
 
 function Home() {
