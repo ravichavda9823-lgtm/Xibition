@@ -30,12 +30,12 @@ function Home() {
     FetchUser();
   }, []);
   const fetchEvent = async () => {
-    try {
+    // try {
       const response = await api.get("/user/event/");
       return response.data.data.slice(0, 3);
-    } catch (error) {
-      console.error("API Error:", error);
-    }
+    // } catch (error) {
+    //   console.error("API Error:", error);
+    // }
   };
 
   const fetchCategory = async () => {
@@ -215,10 +215,10 @@ function Home() {
               ) : isError ? (
                 <h4 className="text-danger text-center">{error.message}</h4>
               ) : (
-                events.map((value, index) => (
+                events?.map((value, index) => (
                   <div className="col-lg-4" key={index}>
                     <div className="venue-item">
-                      {/* ✅ Event Image */}
+                  
                       <div className="thumb" style={{ height: "280px" }}>
                         <img src={value.event_img} alt={value.event_name} />
                       </div>
@@ -233,25 +233,24 @@ function Home() {
                         </div>
 
                         <div className="right-content">
-                          {/* ✅ Event Name */}
+                     
                           <h4>{value.event_name}</h4>
 
-                          {/* ✅ Artist */}
+                       
                           <p>
                             <strong>Artist:</strong> {value.artist_name}
                           </p>
 
-                          {/* ✅ Address */}
+                    
                           <p>
                             <strong>Location:</strong> {value.address}
                           </p>
 
-                          {/* ✅ Date */}
+           
                           <p>
                             <strong>Date:</strong> {value.datetime}
                           </p>
 
-                          {/* ✅ Seats */}
                           <ul>
                             <li>
                               <i className="fa fa-sitemap" />
@@ -264,7 +263,7 @@ function Home() {
                           </ul>
 
                           <div className="d-flex align-items-center justify-content-evenly mt-3">
-                            {/* ✅ Price */}
+                        
                             <div className="price pe-3">
                               <span>
                                 1 ticket <br />
