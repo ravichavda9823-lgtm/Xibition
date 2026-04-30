@@ -32,7 +32,7 @@ function Home() {
   const fetchEvent = async () => {
     // try {
       const response = await api.get("/user/event/");
-      return response.data.data.slice(0, 3);
+      return response.data.data;
     // } catch (error) {
     //   console.error("API Error:", error);
     // }
@@ -41,7 +41,7 @@ function Home() {
   const fetchCategory = async () => {
     try {
       const response = await api.get("/user/category/");
-      return response.data.data.slice(0, 3);
+      return response.data.data;
     } catch (error) {
       console.error("API Error:", error);
     }
@@ -215,7 +215,7 @@ function Home() {
               ) : isError ? (
                 <h4 className="text-danger text-center">{error.message}</h4>
               ) : (
-                events?.map((value, index) => (
+                events?.slice(0,3).map((value, index) => (
                   <div className="col-lg-4" key={index}>
                     <div className="venue-item">
                   
@@ -314,7 +314,7 @@ function Home() {
               ) : iserror ? (
                 <h4 className="text-danger text-center">{Error.message}</h4>
               ) : (
-                category?.map((value, index) => (
+                category?.slice(0,3).map((value, index) => (
                   <div className="col-lg-4" key={index}>
                     <div className="event-item">
                       <div className="thumb">
