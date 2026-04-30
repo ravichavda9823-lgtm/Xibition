@@ -3,7 +3,7 @@ import { LogoutwithoutNotification } from "./Logout";
 import CheckToken from "./CheckToken";
 
 let api = axios.create({
-    baseURL:"http://localhost:8000/api"
+     baseURL:import.meta.env.VITE_API_URl
 });
 
 api.interceptors.request.use((config)=>{
