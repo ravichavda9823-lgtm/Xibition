@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import Aside from "../common/aside";
+
 import Header from "../common/Header";
 import Footer from "../common/Footer";
 import api from "../utills/AxiosConfig";
 import { toast } from "react-toastify";
+import Aside from "../common/aside";
 
 function EditUser() {
   const location = useLocation();

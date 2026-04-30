@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import { FaReply, FaTrash } from "react-icons/fa";
-import Aside from "../common/aside";
+
 import Header from "../common/Header";
 import Footer from "../common/Footer";
 import api from "../utills/AxiosConfig";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { toast } from "react-toastify";
+import Aside from "../common/aside";
 
 function ManageComplaint() {
   const queryClient = useQueryClient();
