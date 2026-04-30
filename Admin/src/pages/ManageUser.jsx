@@ -6,13 +6,13 @@ import {
   FaUserCheck,
   FaUserSlash,
 } from "react-icons/fa";
-import Aside from "../common/aside";
 import Header from "../common/Header";
 import Footer from "../common/Footer";
 import api from "../utills/AxiosConfig";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
+import Aside from "../common/aside";
 
 function ManageUser() {
   let navigate = useNavigate();
@@ -56,6 +56,7 @@ function ManageUser() {
     <div className="layout-wrapper layout-content-navbar">
       <div className="layout-container">
         <Aside />
+         
 
         <div className="layout-page">
           <Header />
