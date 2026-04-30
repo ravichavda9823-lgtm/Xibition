@@ -17,6 +17,7 @@ app.use(
 );
 
 
+
 //common
 let AuthRotue = require("./routes/auth.route");
 app.use("/api/uploads", express.static("src/uploads"));
