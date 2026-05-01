@@ -32,8 +32,9 @@ function Home() {
   const fetchEvent = async () => {
     try {
       const response = await api.get("/user/event/");
-      return response.data;
-    } catch (error) {
+      console.log(response);
+      return response.data.data;
+    } catch (error) { 
       console.error("API Error:", error);
     }
   };
@@ -41,7 +42,8 @@ function Home() {
   const fetchCategory = async () => {
     try {
       const response = await api.get("/user/category/");
-      return response.data;
+      console.log(response);
+      return response.data.data;
     } catch (error) {
       console.error("API Error:", error);
     }
