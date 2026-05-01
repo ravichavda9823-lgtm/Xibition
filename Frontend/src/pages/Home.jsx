@@ -33,7 +33,7 @@ function Home() {
     try {
       const response = await api.get("/user/event/");
       console.log(response);
-      return response.data.data;
+      return response.data.data.slice(0,3);
     } catch (error) { 
       console.error("API Error:", error);
     }
@@ -43,7 +43,7 @@ function Home() {
     try {
       const response = await api.get("/user/category/");
       console.log(response);
-      return response.data.data;
+      return response.data.data.slice(0,3);
     } catch (error) {
       console.error("API Error:", error);
     }
@@ -217,7 +217,7 @@ function Home() {
               ) : isError ? (
                 <h4 className="text-danger text-center">{error.message}</h4>
               ) : (
-                events?.slice(0,3).map((value, index) => (
+                events?.map((value, index) => (
                   <div className="col-lg-4" key={index}>
                     <div className="venue-item">
                   
@@ -316,7 +316,7 @@ function Home() {
               ) : iserror ? (
                 <h4 className="text-danger text-center">{Error.message}</h4>
               ) : (
-                category?.slice(0,3 ).map((value, index) => (
+                category?.map((value, index) => (
                   <div className="col-lg-4" key={index}>
                     <div className="event-item">
                       <div className="thumb">
