@@ -24,7 +24,7 @@ function Login() {
 
   const login = async (user) => {
     let response = await axios.post(
-    "https://backend-8jl9.onrender.com/api/auth/signin",
+    `${import.meta.env.VITE_API_URL}/auth/signin`,
       user
     );
     return response.data;
