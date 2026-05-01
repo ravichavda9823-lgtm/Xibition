@@ -11,7 +11,7 @@ function Home() {
   async function FetchUser() {
     if (CheckRole() === "user") {
       try {
-        let response = await api.get("/user/profilehome");
+        let response = await api.get("/user/profile/profilehome");
 
         console.log(response);
 
