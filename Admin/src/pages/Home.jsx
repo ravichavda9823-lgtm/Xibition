@@ -31,8 +31,6 @@ function Home() {
 
         <Aside />
 
-    
-
           <div className="menu-mobile-toggler d-xl-none rounded-1">
             <a
               href="javascript:void(0);"
